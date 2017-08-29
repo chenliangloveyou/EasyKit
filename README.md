@@ -12,19 +12,17 @@
 ### 配置参数讲解
 
 #### 如下的参数都可以不传
-  
-   
-    
-      蓝牙所有操作所在的线程。如果不传，将会在主线程上操作。
-      note：如果传入线程，那么返回数据的UI操作需要放到主线程上
-     @property (nonatomic,strong)dispatch_queue_t managerQueue ;
+
+    蓝牙所有操作所在的线程。如果不传，将会在主线程上操作。
+    note：如果传入线程，那么返回数据的UI操作需要放到主线程上
+    @property (nonatomic,strong)dispatch_queue_t managerQueue ;
     
     CBCentralManagerOptionShowPowerAlertKey  默认为NO，系统当蓝牙关闭时是否弹出一个警告框
     CBCentralManagerOptionRestoreIdentifierKey 系统被杀死，重新恢复centermanager的ID
     @property (nonatomic,strong)NSDictionary *managerDictionary ;
     
     CBCentralManagerScanOptionAllowDuplicatesKey  默认为NO，过滤功能是否启用，每次寻找都会合并相同的peripheral。如果设备YES的话每次都能接受到来自peripherals的广播包数据。
-     CBCentralManagerScanOptionSolicitedServiceUUIDsKey  想要扫描的服务的UUID，以一个数组的形式存在。扫描的时候只会扫描到包含这些UUID的设备。
+    CBCentralManagerScanOptionSolicitedServiceUUIDsKey  想要扫描的服务的UUID，以一个数组的形式存在。扫描的时候只会扫描到包含这些UUID的设备。
     @property (nonatomic,strong)NSDictionary *scanOptions ;
   
     连接设备所需的服务.
@@ -46,16 +44,16 @@
 
 
 #### 获取单例，并赋值配置信息
-   
-    获取单例
+  
+     ``` 获取单例
     + (instancetype)shareInstance ;
     创建配置信息
     EasyManagerOptions *options = [EasyManagerOptions alloc]init];
     options.autoConnectAfterDisconnect - YES ;
     options.connectTimeOut = 6 ;
     设置配置信息
-    [EasyBlueToothManager shareInstance].managerOptions = options ;
-     
+    [EasyBlueToothManager shareInstance].managerOptions = options ; ```
+    
 ### 使用场景
 
 #### 扫描设备名称后直接连接设备
