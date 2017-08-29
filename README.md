@@ -9,13 +9,10 @@
 
 # 使用方法
 
-### (一)配置参数讲解
+### (第一步)配置参数讲解
 
 #### 如下的参数都可以不传
 
-    蓝牙所有操作所在的线程。如果不传，将会在主线程上操作。
-    note：如果传入线程，那么返回数据的UI操作需要放到主线程上
-    @property (nonatomic,strong)dispatch_queue_t managerQueue ;
     
     CBCentralManagerOptionShowPowerAlertKey  默认为NO，系统当蓝牙关闭时是否弹出一个警告框
     CBCentralManagerOptionRestoreIdentifierKey 系统被杀死，重新恢复centermanager的ID
@@ -27,7 +24,7 @@
   
     连接设备所需的服务.
     @property (nonatomic,strong)NSArray *scanServiceArray ;
-  
+    
     CBConnectPeripheralOptionNotifyOnConnectionKey    默认为NO，APP被挂起时，这时如果连接到peripheral时，是否要给APP一个提示框。
     CBConnectPeripheralOptionNotifyOnDisconnectionKey 默认为NO，APP被挂起时，恰好在这个时候断开连接，要不要给APP一个断开提示。 
     CBConnectPeripheralOptionNotifyOnNotificationKey  默认为NO，APP被挂起时，是否接受到所有的来自peripheral的包都要弹出提示框。
@@ -46,17 +43,24 @@
 #### 获取单例，并赋值配置信息
   
      ``` 
-     获取单例
+    /**
+     *获取单例
+     */
     + (instancetype)shareInstance ;
-    创建配置信息
+    /**
+     * 创建配置信息
+     */
     EasyManagerOptions *options = [EasyManagerOptions alloc]init];
     options.autoConnectAfterDisconnect - YES ;
     options.connectTimeOut = 6 ;
-    设置配置信息
+    
+     /**
+     * 设置配置信息
+     */
     [EasyBlueToothManager shareInstance].managerOptions = options ; 
     ```
     
-### (二)扫描并连接设备 
+### (第二步)扫描并连接设备 
 
 #### 场景1，扫描设备名称后直接连接设备
 
@@ -143,7 +147,7 @@
   ```
 
     
-### (三)读写操作
+### (第三步)读写操作
 
 
 # 联系作者
