@@ -44,27 +44,23 @@
     
 
 #### 获取单例，并赋值配置信息
-  ```
+
+
     /**
-     *获取单例
-     */
-    + (instancetype)shareInstance ;
-   ```
-  ```
+     * 获取单例
+    */
+     + (instancetype)shareInstance ;
     /**
      * 创建配置信息
      */
-    EasyManagerOptions *options = [EasyManagerOptions alloc]init];
+    EasyManagerOptions *options = [EasyManagerOptions alloc]init];
     options.autoConnectAfterDisconnect - YES ;
     options.connectTimeOut = 6 ;
-  ```
- ```
-     /**
+    /**
      * 设置配置信息
      */
-    [EasyBlueToothManager shareInstance].managerOptions = options ; 
-    
- ```
+    [EasyBlueToothManager shareInstance].managerOptions = options ;
+
 
 ### (第二步)扫描并连接设备 
 
