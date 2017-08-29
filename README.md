@@ -66,9 +66,10 @@
  * callback 连接设备的回调信息
  */
 - (void)scanAndConnectDeviceWithName:(NSString *)name
-                            callback:(blueToothScanCallback)callback ;
-                            ```
+   ```
+   
 #### 扫描设备后选择一些符合规则的设备后连接
+
 ```
 /**
  * 连接一个一定规则的设备，依据peripheral里面的名称，广播数据，RSSI来赛选需要的连接的设备
@@ -76,21 +77,23 @@
  * callback 连接设备的回调信息
  */
 - (void)scanAndConnectDeviceWithRule:(blueToothScanRule)rule
-                            callback:(blueToothScanCallback)callback ;```
+                            callback:(blueToothScanCallback)callback ;
+```
 
 #### 需要保存设备，然后直接连接单个设备
 
 
-1，先扫描符合规则的设备 选择一个保存设备的uuid到本地
 ```
+1，先扫描符合规则的设备 选择一个保存设备的uuid到本地
 /**
  * 根据规则扫描符合名称的所有设备
  */
 - (void)scanAllDeviceWithRule:(blueToothScanRule)rule
                      callback:(blueToothScanAllCallback)callback ;
  ```
-2，取出上一步中保存的uuid直接连接
+
 ```
+2，取出上一步中保存的uuid直接连接
 /**
  * 连接一个确定ID的设备，一般此ID可以保存在本地。然后直接连接
  * name 设备名称
