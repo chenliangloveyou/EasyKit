@@ -9,7 +9,7 @@
 
 # 使用方法
 
-### 配置参数讲解
+### (一)配置参数讲解
 
 #### 如下的参数都可以不传
 
@@ -45,18 +45,20 @@
 
 #### 获取单例，并赋值配置信息
   
-     ``` 获取单例
+     ``` 
+     获取单例
     + (instancetype)shareInstance ;
     创建配置信息
     EasyManagerOptions *options = [EasyManagerOptions alloc]init];
     options.autoConnectAfterDisconnect - YES ;
     options.connectTimeOut = 6 ;
     设置配置信息
-    [EasyBlueToothManager shareInstance].managerOptions = options ; ```
+    [EasyBlueToothManager shareInstance].managerOptions = options ; 
+    ```
     
-### 使用场景
+### (二)扫描并连接设备 
 
-#### 扫描设备名称后直接连接设备
+#### 场景1，扫描设备名称后直接连接设备
 
 ```
 /**
@@ -66,7 +68,7 @@
                      callback:(blueToothScanAllCallback)callback ;
    ```
    
-#### 扫描设备后选择一些符合规则的设备后连接
+#### 场景2，扫描设备后选择一些符合规则的设备后连接
 
 ```
 /**
@@ -78,8 +80,7 @@
                             callback:(blueToothScanCallback)callback ;
 ```
 
-#### 需要保存设备，然后直接连接单个设备
-
+#### 场景3，需要保存设备，然后直接连接单个设备
 
 ```
 1，先扫描符合规则的设备 选择一个保存设备的uuid到本地
@@ -101,7 +102,7 @@
                                   callback:(blueToothScanCallback)callback ;
   ```
 
-#### 单纯的操作一些设备信息，可以采用一行代码
+#### 场景4，单纯的操作一些设备信息，可以采用一行代码
 ```
 /**
  * 一行代码连接所有的设备
@@ -121,7 +122,7 @@
 
 ```
 
-#### 需要连接多个设备
+#### 场景5，需要连接多个设备
 
 ```
 /**
@@ -140,6 +141,10 @@
 - (void)scanAndConnectAllDeviceWithRule:(blueToothScanRule)rule
                                callback:(blueToothScanAllCallback)callback ;
   ```
+
+    
+### (三)读写操作
+
 
 # 联系作者
 如果在使用过程中遇到任务问题，或者发现使用不够恰当。希望能Issues我。
