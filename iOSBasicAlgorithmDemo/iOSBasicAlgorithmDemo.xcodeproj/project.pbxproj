@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		688FE6E21F77F8CB007CB4FC /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 688FE6E11F77F8CB007CB4FC /* BinaryTree.m */; };
 		ADA3D6921F31B64C00342BCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA3D6911F31B64C00342BCF /* main.m */; };
 		ADA3D6951F31B64C00342BCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA3D6941F31B64C00342BCF /* AppDelegate.m */; };
 		ADA3D6981F31B64C00342BCF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA3D6971F31B64C00342BCF /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		688FE6E01F77F8CB007CB4FC /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
+		688FE6E11F77F8CB007CB4FC /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		ADA3D68D1F31B64B00342BCF /* iOSBasicAlgorithmDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBasicAlgorithmDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA3D6911F31B64C00342BCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADA3D6931F31B64C00342BCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				ADA3D6941F31B64C00342BCF /* AppDelegate.m */,
 				ADA3D6961F31B64C00342BCF /* ViewController.h */,
 				ADA3D6971F31B64C00342BCF /* ViewController.m */,
+				688FE6E01F77F8CB007CB4FC /* BinaryTree.h */,
+				688FE6E11F77F8CB007CB4FC /* BinaryTree.m */,
 				ADA3D6991F31B64C00342BCF /* Main.storyboard */,
 				ADA3D69C1F31B64C00342BCF /* Assets.xcassets */,
 				ADA3D69E1F31B64C00342BCF /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688FE6E21F77F8CB007CB4FC /* BinaryTree.m in Sources */,
 				ADA3D6981F31B64C00342BCF /* ViewController.m in Sources */,
 				ADA3D6951F31B64C00342BCF /* AppDelegate.m in Sources */,
 				ADA3D6921F31B64C00342BCF /* main.m in Sources */,
@@ -312,6 +318,7 @@
 				ADA3D6A61F31B64C00342BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
